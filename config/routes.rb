@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'supplements#index'
   resources :categories
   resources :supplements
   resources :vendors
