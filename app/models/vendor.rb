@@ -1,2 +1,2 @@
-class Vendor < ApplicationRecord
+class Brand < ApplicationRecord
 end

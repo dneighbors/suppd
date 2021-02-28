@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_02_28_220847) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "vendors", charset: "utf8", force: :cascade do |t|
+  create_table "brands", charset: "utf8", force: :cascade do |t|
     t.string "name"
     t.string "website_url"
     t.datetime "created_at", precision: 6, null: false

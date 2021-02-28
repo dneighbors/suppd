@@ -16,7 +16,7 @@ class SupplementsTest < ApplicationSystemTestCase
 
     fill_in "Category", with: @supplement.category_id
     fill_in "Name", with: @supplement.name
-    fill_in "Vendor", with: @supplement.vendor_id
+    fill_in "Brand", with: @supplement.vendor_id
     click_on "Create Supplement"
 
     assert_text "Supplement was successfully created"
@@ -29,7 +29,7 @@ class SupplementsTest < ApplicationSystemTestCase
 
     fill_in "Category", with: @supplement.category_id
     fill_in "Name", with: @supplement.name
-    fill_in "Vendor", with: @supplement.vendor_id
+    fill_in "Brand", with: @supplement.vendor_id
     click_on "Update Supplement"
 
     assert_text "Supplement was successfully updated"

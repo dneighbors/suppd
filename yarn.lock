@@ -5498,7 +5498,7 @@ postcss-merge-rules@^4.0.3:
     cssnano-util-same-parent "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
-    vendors "^1.0.0"
+    brands "^1.0.0"
 
 postcss-minify-font-values@^4.0.2:
   version "4.0.2"
@@ -7360,9 +7360,9 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vendors@^1.0.0:
+brands@^1.0.0:
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
+  resolved "https://registry.yarnpkg.com/brands/-/brands-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
 
 verror@1.10.0:

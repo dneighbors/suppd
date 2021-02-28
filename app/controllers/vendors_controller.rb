@@ -1,31 +1,31 @@
-class VendorsController < ApplicationController
+class BrandsController < ApplicationController
   before_action :set_vendor, only: %i[ show edit update destroy ]
 
-  # GET /vendors or /vendors.json
+  # GET /brands or /brands.json
   def index
-    @vendors = Vendor.all
+    @brands = Brand.all
   end
 
-  # GET /vendors/1 or /vendors/1.json
+  # GET /brands/1 or /brands/1.json
   def show
   end
 
-  # GET /vendors/new
+  # GET /brands/new
   def new
-    @vendor = Vendor.new
+    @vendor = Brand.new
   end
 
-  # GET /vendors/1/edit
+  # GET /brands/1/edit
   def edit
   end
 
-  # POST /vendors or /vendors.json
+  # POST /brands or /brands.json
   def create
-    @vendor = Vendor.new(vendor_params)
+    @vendor = Brand.new(vendor_params)
 
     respond_to do |format|
       if @vendor.save
-        format.html { redirect_to @vendor, notice: "Vendor was successfully created." }
+        format.html { redirect_to @vendor, notice: "Brand was successfully created." }
         format.json { render :show, status: :created, location: @vendor }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -34,11 +34,11 @@ class VendorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /vendors/1 or /vendors/1.json
+  # PATCH/PUT /brands/1 or /brands/1.json
   def update
     respond_to do |format|
       if @vendor.update(vendor_params)
-        format.html { redirect_to @vendor, notice: "Vendor was successfully updated." }
+        format.html { redirect_to @vendor, notice: "Brand was successfully updated." }
         format.json { render :show, status: :ok, location: @vendor }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -47,11 +47,11 @@ class VendorsController < ApplicationController
     end
   end
 
-  # DELETE /vendors/1 or /vendors/1.json
+  # DELETE /brands/1 or /brands/1.json
   def destroy
     @vendor.destroy
     respond_to do |format|
-      format.html { redirect_to vendors_url, notice: "Vendor was successfully destroyed." }
+      format.html { redirect_to brands_url, notice: "Brand was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -59,7 +59,7 @@ class VendorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vendor
-      @vendor = Vendor.find(params[:id])
+      @vendor = Brand.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

@@ -1,12 +1,12 @@
 require "test_helper"
 
-class VendorsControllerTest < ActionDispatch::IntegrationTest
+class BrandsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @vendor = vendors(:one)
+    @vendor = brands(:one)
   end
 
   test "should get index" do
-    get vendors_url
+    get brands_url
     assert_response :success
   end
 
@@ -16,11 +16,11 @@ class VendorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create vendor" do
-    assert_difference('Vendor.count') do
-      post vendors_url, params: { vendor: { name: @vendor.name, website_url: @vendor.website_url } }
+    assert_difference('Brand.count') do
+      post brands_url, params: { vendor: { name: @vendor.name, website_url: @vendor.website_url } }
     end
 
-    assert_redirected_to vendor_url(Vendor.last)
+    assert_redirected_to vendor_url(Brand.last)
   end
 
   test "should show vendor" do
@@ -39,10 +39,10 @@ class VendorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy vendor" do
-    assert_difference('Vendor.count', -1) do
+    assert_difference('Brand.count', -1) do
       delete vendor_url(@vendor)
     end
 
-    assert_redirected_to vendors_url
+    assert_redirected_to brands_url
   end
 end
