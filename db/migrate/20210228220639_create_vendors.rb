@@ -1,6 +1,6 @@
 class CreateBrands < ActiveRecord::Migration[6.1]
   def change
-    create_table :brands do |t|
+    create_table :vendors do |t|
       t.string :name
       t.string :website_url
 

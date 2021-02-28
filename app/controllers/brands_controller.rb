@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
-  before_action :set_vendor, only: %i[ show edit update destroy ]
+  before_action :set_brand, only: %i[ show edit update destroy ]
 
   # GET /brands or /brands.json
   def index
@@ -12,7 +12,7 @@ class BrandsController < ApplicationController
 
   # GET /brands/new
   def new
-    @vendor = Brand.new
+    @brand = Brand.new
   end
 
   # GET /brands/1/edit
@@ -21,15 +21,15 @@ class BrandsController < ApplicationController
 
   # POST /brands or /brands.json
   def create
-    @vendor = Brand.new(vendor_params)
+    @brand = Brand.new(vendor_params)
 
     respond_to do |format|
-      if @vendor.save
-        format.html { redirect_to @vendor, notice: "Brand was successfully created." }
-        format.json { render :show, status: :created, location: @vendor }
+      if @brand.save
+        format.html { redirect_to @brand, notice: "Brand was successfully created." }
+        format.json { render :show, status: :created, location: @brand }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @vendor.errors, status: :unprocessable_entity }
+        format.json { render json: @brand.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -37,19 +37,19 @@ class BrandsController < ApplicationController
   # PATCH/PUT /brands/1 or /brands/1.json
   def update
     respond_to do |format|
-      if @vendor.update(vendor_params)
-        format.html { redirect_to @vendor, notice: "Brand was successfully updated." }
-        format.json { render :show, status: :ok, location: @vendor }
+      if @brand.update(vendor_params)
+        format.html { redirect_to @brand, notice: "Brand was successfully updated." }
+        format.json { render :show, status: :ok, location: @brand }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @vendor.errors, status: :unprocessable_entity }
+        format.json { render json: @brand.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /brands/1 or /brands/1.json
   def destroy
-    @vendor.destroy
+    @brand.destroy
     respond_to do |format|
       format.html { redirect_to brands_url, notice: "Brand was successfully destroyed." }
       format.json { head :no_content }
@@ -59,11 +59,11 @@ class BrandsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vendor
-      @vendor = Brand.find(params[:id])
+      @brand = Brand.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def vendor_params
-      params.require(:vendor).permit(:name, :website_url)
+      params.require(:brand).permit(:name, :website_url)
     end
 end

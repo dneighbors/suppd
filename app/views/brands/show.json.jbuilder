@@ -1,1 +1,1 @@
-json.partial! "brands/vendor", vendor: @vendor
+json.partial! "brands/brand", brand: @brand
