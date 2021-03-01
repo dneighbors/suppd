@@ -16,7 +16,7 @@
     <% @supplements.each do |supplement| %>
       <tr>
         <td><%= supplement.category.name %></td>
-        <td><%= supplement.vendor.name %></td>
+        <td><%= supplement.brand.name %></td>
         <td><%= supplement.name %></td>
         <td><%= link_to 'Show', supplement %></td>
         <td><%= link_to 'Edit', edit_supplement_path(supplement) %></td>
