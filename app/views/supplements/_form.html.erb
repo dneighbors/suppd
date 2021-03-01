@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :vendor_id %>
-    <%= form.number_field :vendor_id %>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.collection_select :brand_id, Brand.order(:name), :id, :name %>
   </div>
 
   <div class="field">
@@ -21,10 +26,6 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

@@ -64,6 +64,6 @@ class SupplementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def supplement_params
-      params.require(:supplement).permit(:vendor_id, :name, :category_id)
+      params.require(:supplement).permit(:brand_id, :name, :category_id)
     end
 end
