@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'supplements#index'
+  root 'home#index'
+  get 'home/index'
   resources :categories
   resources :supplements
   resources :brands
