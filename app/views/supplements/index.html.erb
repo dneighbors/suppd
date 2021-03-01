@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>Category</th>
       <th>Brand</th>
       <th>Name</th>
-      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @supplements.each do |supplement| %>
       <tr>
-        <td><%= supplement.vendor_id %></td>
+        <td><%= supplement.category.name %></td>
+        <td><%= supplement.vendor.name %></td>
         <td><%= supplement.name %></td>
-        <td><%= supplement.category_id %></td>
         <td><%= link_to 'Show', supplement %></td>
         <td><%= link_to 'Edit', edit_supplement_path(supplement) %></td>
         <td><%= link_to 'Destroy', supplement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
